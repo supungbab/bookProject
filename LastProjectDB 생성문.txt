@@ -1,0 +1,58 @@
+H2 사용
+
+보드 테이블 생성
+create table board(
+seq number(5) primary key not null,
+title varchar(200),
+code varchar(20)
+);
+insert into board (seq,title,code) values (1, '기출문제1','E0001');
+insert into board (seq,title,code) values (2, '기출문제2','E0002');
+insert into board (seq,title,code) values (3, '기출문제3','E0003');
+
+문제 테이블 생성
+create table E0001(
+num number(10) primary key not null,
+question varchar(200),
+example1 varchar(200),
+example2 varchar(200),
+example3 varchar(200),
+example4 varchar(200),
+answer number(10)
+);
+
+create table E0002(
+num number(10) primary key not null,
+question varchar(200),
+example1 varchar(200),
+example2 varchar(200),
+example3 varchar(200),
+example4 varchar(200),
+answer number(10)
+);
+create table E0003(
+num number(10) primary key not null,
+question varchar(200),
+example1 varchar(200),
+example2 varchar(200),
+example3 varchar(200),
+example4 varchar(200),
+answer number(10)
+);
+
+스코어 테이블
+create table SCORE(
+seq number(10) primary key not null,
+code varchar(30) not null,
+id varchar(30) not null,
+score varchar(30) not null,
+examdate date DEFAULT CURRENT_TIMESTAMP
+);
+
+유저테이블
+create table USERS(
+ID varchar2(15) primary key not null,
+password varchar2(8),
+name varchar2(30),
+role varchar2(5)
+);
